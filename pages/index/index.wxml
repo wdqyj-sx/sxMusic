@@ -1,0 +1,38 @@
+<!--pages/index/index.wxml-->
+<view class="indexContainer">
+<!--    轮播图区域-->
+   <swiper class="banner" indicator-dots="true" indicator-color='ivory' indicator-active-color="#d43c33">
+      <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+         <image src="{{item.pic}}"></image>
+      </swiper-item>
+   </swiper>
+   <!-- 导航区 -->
+   <view class="navContainer">
+      <view class="navItem">
+         <text class="iconfont icon-meirituijian"></text>
+      <text>每日推荐</text>
+      </view>
+      <view class="navItem">
+         <text class="iconfont icon-gedan1"></text>
+      <text>Other页面</text>
+      </view>
+      <view class="navItem">
+         <text class="iconfont icon-icon-ranking"></text>
+      <text>排行榜</text>
+      </view>
+      <view class="navItem">
+         <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+      </view>
+      <view class="navItem">
+         <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text>直播</text>
+      </view>
+      
+   </view>
+   <!-- 歌曲推荐区 -->
+  <view>
+    <NavHeader  title="推荐歌曲" nav="为你精心推荐"></NavHeader>
+  </view>
+
+</view>
