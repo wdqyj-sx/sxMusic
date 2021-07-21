@@ -30,3 +30,67 @@
 .navItem text {
   font-size: 26rpx;
 }
+.recommendContainer {
+  padding: 20rpx;
+}
+.recommendScroll {
+  display: flex;
+  height: 300rpx;
+  padding: 0 5rpx;
+}
+.recommendScroll .scrollItem {
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+.scrollItem image {
+   width: 200rpx;
+   height: 200rpx;
+   border-radius: 10rpx;
+}
+.scrollItem text {
+  font-size: 26rpx;
+  overflow: hidden;
+  text-emphasis: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.topList {
+  padding: 20rpx;
+}
+.topListSwiper {
+  height: 420rpx;
+}
+.swiperItem {
+  width: 96%;
+  background: #fbfbfb;
+}
+.swiperItemName {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.musicItem {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.musicItem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+.musicItem .count {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.musicItem .musicName {
+  
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

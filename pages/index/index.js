@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-      bannerList:[]
+      bannerList:[],
+      recommendList:[],
+      topListData:[]
   },
 
   /**
@@ -17,6 +19,26 @@ Page({
       this.setData({
         bannerList:bannerListData.banners
       })
+      let recommendLists = await request("/personalized",{limit:10});
+      console.log(recommendLists)
+      this.setData({
+        recommendList:recommendLists.result
+      })
+      //排行榜数据
+      let index = 0;
+      let arr=[];
+      while(index < 5){
+        let topList = await request("/top/list",{idx:index++});
+        let topListItem = {
+          name:topList.playlist.name,
+          tracks:topList.playlist.tracks.slice(0,3)
+        };
+        arr.push(topListItem);
+        this.setData({
+          topListData:arr
+        })
+       
+      }
      
   },
 

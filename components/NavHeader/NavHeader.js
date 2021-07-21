@@ -1,4 +1,4 @@
-// components/NavHeader.js
+// components/NavHeader/NavHeader.js
 Component({
   /**
    * 组件的属性列表
@@ -10,7 +10,7 @@ Component({
       },
       nav:{
         type:String,
-        value:'nav'
+        value:"nav"
       }
   },
 
