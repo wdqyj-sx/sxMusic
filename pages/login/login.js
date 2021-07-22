@@ -1,16 +1,11 @@
-// pages/personal/personal.js
-
-let startY = 0;
-let moveY = 0;
-let moveDistanceY = 0;
-
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    coverTransForm:""
+
   },
 
   /**
@@ -40,35 +35,7 @@ Page({
   onHide: function () {
 
   },
-  handleTouchStart(event){
-    this.setData({
-      coverTransition:""
-    })
-    //获取第一个手指的坐标
-    startY = event.touches[0].clientY;
-    
-  },
-  handleTouchMove(event){
-    moveY = event.touches[0].clientY;
-    moveDistanceY = moveY - startY;
-    if(moveDistanceY< 0){
-      return ;
-    }
-    if(moveDistanceY >80) {
 
-      moveDistanceY = 80;
-    }
-    console.log(moveDistanceY)
-    this.setData({
-      coverTransForm:`translateY(${moveDistanceY}rpx)`
-    })
-  },
-  handleTouchEnd(event){
-    this.setData({
-      coverTransForm:"0rpx",
-      coverTransition:'transform 1s linear'
-    })
-  },
   /**
    * 生命周期函数--监听页面卸载
    */

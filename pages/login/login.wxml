@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <view class="login-title">
+    <text>欢迎回来！</text>
+  </view>
+  <form class="login-form"> 
+    <view class="form-item">
+        <label>账号</label>
+        <input name="uname"  placeholder="请输入手机号"/>
+    </view>
+    <view class="form-item">
+        <label>密码</label>
+        <input name="psd"  placeholder="请输入密码"/>
+    </view>
+  </form>
+</view>

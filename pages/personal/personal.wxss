@@ -1,1 +1,147 @@
 /* pages/personal/personal.wxss */
+.personalContainer {
+  width: 100%;
+  height: 100%;
+}
+.user-section {
+  height: 520rpx;
+  position: relative;
+  padding: 80rpx 30rpx 0;
+}
+.user-section .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+.user-info-box {
+  position: relative;
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.user-info-box .portrait {
+  width: 130rpx;
+  height: 130rpx;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+}
+.user-info-box .username {
+  font-size: 24;
+  color:#303133;
+  margin-left:20rpx;
+}
+.vip-card-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 240rpx;
+  background-color: rgba(0, 0, 0, .7);
+  color: #f7d680;
+  border-radius: 16rpx 16rpx 0 0;
+  padding: 20rpx 24rpx;
+}
+.vip-card-box .card-bg {
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  width: 380rpx;
+  height: 260rpx;
+}
+.vip-card-box .b-btn {
+  position: absolute;
+  right: 20rpx;
+  top: 16rpx;
+  width: 132rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  color: #36343c;
+  border-radius: 20rpx;
+  background-color: #f9e6af;
+  z-index: 1;
+}
+.vip-card-box .tit {
+  font-size: 22rpx;
+  columns: #f7d680;
+  margin-bottom: 28rpx;
+}
+.vip-card-box .tit .iconfont {
+  color: #f6e5a3;
+  margin-right: 16rpx;
+}
+.vip-card-box .e-m {
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+.vip-card-box .e-b {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #d8cba9;
+}
+.cover-container {
+  position: relative;
+  margin-top: -150rpx;
+  padding: 0 30rpx;
+  background-color: #f5f5f5;
+  padding-bottom: 20rpx;
+
+}
+.cover-container .arc {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 36rpx;
+  top: -34rpx;  
+}
+.cover-container .nav-section {
+  display: flex;
+  background-color: #fff;
+  padding:20rpx 0;
+  border-radius: 15rpx;
+}
+.nav-section .nav-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-section .nav-item .iconfont {
+  font-size: 50rpx;
+  color: #d43c33;
+  line-height: 70rpx;
+}
+.personalContent {
+  margin-top: 20rpx;
+  background-color: #fff;
+
+}
+.recentPlayContainer {
+  padding-left: 20rpx;
+}
+.recentPlayContainer .title {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 80rpx;
+}
+.cardList {
+  margin-top: 20rpx;
+}
+.cardList .card-item {
+  padding: 10rpx;
+  height: 80rpx;
+  border-top: 1px solid #eee;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.cardList .card-item .more {
+  float:right;
+}
