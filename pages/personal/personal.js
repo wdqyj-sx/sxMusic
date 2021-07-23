@@ -1,4 +1,5 @@
 // pages/personal/personal.js
+import request from "../../utils/request";
 
 let startY = 0;
 let moveY = 0;
@@ -10,15 +11,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    coverTransForm:""
+    coverTransForm:"",
+    coverTransition:"",
+    userInfo:"", //用户数据
+    recentPlayList:[] //最近播放列表
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 获取用户信息
+    let userInfo = wx.getStorageSync("userInfo")
+    if(userInfo){
+      this.setData({
+        userInfo:JSON.parse(userInfo)
+      })
+      this.getRecentPlay(this.data.userInfo.userId)
+    }
+   
+    //获取用户最近播放记录
 
   },
+  async getRecentPlay(userId){
+    let recentList = await request("/user/record",{uid:userId,type:0})
+   
+    let index = 0;
+    let recentPlayList = recentList.allData.splice(0,10).map(item =>{
+        item.id = index++;
+        return item;
+    })
+    this.setData({
+      recentPlayList
+    })
+  }
+  ,
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -58,7 +85,7 @@ Page({
 
       moveDistanceY = 80;
     }
-    console.log(moveDistanceY)
+
     this.setData({
       coverTransForm:`translateY(${moveDistanceY}rpx)`
     })
@@ -95,5 +122,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //跳转登录页
+  toLogin(){
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
   }
 })

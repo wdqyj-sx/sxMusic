@@ -1,46 +1,42 @@
-/* pages/login/login.wxss */
 page {
   background-color: #f0f1f3;
 }
-.logon-container {
-  width: 100%;
-  height: 100%;
-}
-.login-title {
+.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100rpx;
-  margin-top: 50rpx;
-  
+  height: 300rpx;
 }
-.login-title text {
- padding: 15rpx 25rpx;
-  border: 1px solid #30b4ff;
-  font-size: 36rpx;
-  color: #555;
+.welcome .title {
+  padding: 15rpx 25rpx;
+  border: 1px solid #54c0fe;
 }
-.login-form {
+.form-content {
+  background-color: #ffffff;
+  box-shadow: 5rpx 5rpx  10rpx #999;
+}
+.form-content .form-item {
   display: flex;
-  margin-top: 50rpx;
-  width: 100%;
-  height: 400rpx;
-  background-color: #fff;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10rpx;
 }
-.login-form .form-item {
-    flex-shrink: 0;
-    width: 100%;
-    display: flex;
-    margin-bottom: 10rpx;
+.form-content .form-item label {
+  border-right: 1px solid #c7c7c7;
+  padding:  0 20rpx;
+  color: #c7c7c7;
 }
-.form-item label {
-  display: block;
-  
-  border-right: 1px solid #999;
+.form-content .form-item input {
+  flex-grow: 1;
+  padding-left: 25rpx;
 }
-.form-item input {
-  margin-left: 15rpx;
-  padding: 10rpx 15rpx;
+.form-placeholder {
+  color: #c7c7c7;
+  font-size: 30rpx;
+}
+
+.btn-area  button {
+  width: 100% !important;
   
 }

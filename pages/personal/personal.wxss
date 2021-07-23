@@ -145,3 +145,15 @@
 .cardList .card-item .more {
   float:right;
 }
+.recentScroll {
+  display: flex;
+  height: 200rpx;
+}
+.recentScroll .recentItem {
+  margin-right: 20rpx;
+}
+.recentScroll .recentItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}

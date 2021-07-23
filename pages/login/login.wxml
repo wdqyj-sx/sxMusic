@@ -1,16 +1,25 @@
-<!--pages/login/login.wxml-->
 <view class="login-container">
-  <view class="login-title">
-    <text>欢迎回来！</text>
+  <view class="welcome">
+    <view class="title">
+      <text>欢迎登录</text>
+    </view>
   </view>
-  <form class="login-form"> 
-    <view class="form-item">
-        <label>账号</label>
-        <input name="uname"  placeholder="请输入手机号"/>
-    </view>
-    <view class="form-item">
-        <label>密码</label>
-        <input name="psd"  placeholder="请输入密码"/>
-    </view>
-  </form>
+  <view class="form-content">
+    <form catchsubmit="formSubmit" >
+      <view class="form-item">
+        <label for="" class="title">账号</label>
+        <input type="text" name="phone" placeholder="请输入手机号码"  
+          maxlength="12"  bindinput="handleInput"  placeholder-class="form-placeholder" 
+          data-key="phone"
+        />
+      </view>
+      <view class="form-item">
+        <label for="" class="title">密码</label>
+        <input type="safe-password" name="psd" placeholder="请输入密码" placeholder-class="form-placeholder" password="true"  maxlength="12"  bindinput="handleInput" data-key="password" />
+      </view>
+      <view class="btn-area">
+        <button  type="primary" formType="submit">登录</button>
+      </view>
+    </form>
+  </view>
 </view>
