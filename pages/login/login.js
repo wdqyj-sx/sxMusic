@@ -68,6 +68,7 @@ Page({
   //后端验证
   async formSubmit(e){
     let {phone,password} = this.data;
+    console.log(phone,password)
     if(!phone|| phone.length<6||!/^1(3|4|5|6|7|8|9)\d{9}$/.test(phone)){
       wx.showToast({
         title: '账号有误',
@@ -80,7 +81,7 @@ Page({
       })
       return ;
     }
-    let result = await request("/login/cellphone",{phone,password});
+    let result = await request("/login/cellphone",{phone,password,isLogin:true});
     if(result.code === 200){
       wx.showToast({
         title: '登录成功',
@@ -117,7 +118,6 @@ Page({
      let type = e.currentTarget.dataset.key;
      let value = e.detail.value;
      let flag = true;
-     console.log(type)
      if(type === 'phone'){
       let phoneReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
       flag = phoneReg.test(value)
