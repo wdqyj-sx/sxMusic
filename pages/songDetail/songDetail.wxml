@@ -1,0 +1,28 @@
+<view class="song-detail-container">
+  <view class="author">{{songs.al.name}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay && 'needleRotate'}} " src="/static/images/song/needle.png" role="img"></image>w
+  <view class="disc-container {{isPlay && 'discAnimation'}}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="musicImage" src="{{songs.al.picUrl}}"></image>
+  </view>
+  <!-- 进度条 -->
+  <view class="progress-container">
+    <text class="begin">{{currentTime}}</text>
+    <view class="progress-item">
+      <view class="current-bar" style="width: {{currentWidth + 'rpx'}}">
+        <view class="current-circle"></view>
+      </view>
+     
+    </view>
+    <text>{{songTime}}</text>
+  </view>
+  <!-- 底部控制播放区 -->
+  <view class="control-music">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+    <text class="iconfont icon-shangyishou" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isPlay?'icon-zanting': 'icon-bofang'}} big" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-next" id="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+</view>

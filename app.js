@@ -12,6 +12,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isPlay:false,
+    musicId:''
   }
 })

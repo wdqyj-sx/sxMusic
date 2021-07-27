@@ -20,7 +20,6 @@ Page({
         bannerList:bannerListData.banners
       })
       let recommendLists = await request("/personalized",{limit:10});
-      console.log(recommendLists)
       this.setData({
         recommendList:recommendLists.result
       })
@@ -41,7 +40,11 @@ Page({
       }
      
   },
-
+toCommendPage(){
+  wx.navigateTo({
+    url: '/pages/recommendSong/recommendSong',
+  })
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

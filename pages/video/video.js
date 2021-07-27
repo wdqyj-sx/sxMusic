@@ -27,6 +27,9 @@ async getVideoGroupList(){
     videoGroupList:getGroupList.data.slice(0,14),
     navId:getGroupList.data[0].id
   })
+  wx.showLoading({
+    title: '正在加载',
+  })
   this.getVideoList(this.data.navId)
 },
 //获取视频数据

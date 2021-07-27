@@ -7,8 +7,8 @@
     <image src="/static/images/logo.png"></image>
   </view>
   <!-- 导航区域 -->
-  <scroll-view class="nav-scroll" scroll-x scroll-with-animation enable-flex>
-      <view class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
+  <scroll-view class="nav-scroll" scroll-x scroll-with-animation enable-flex scroll-into-view="{{'scroll'+navId}}">
+      <view class="navItem" wx:for="{{videoGroupList}}" wx:key="id" id="{{'scroll'+item.id}}">
         <view class="nav-content {{navId === item.id?'active':''}}"  bindtap="changeNav"
           id="{{item.id}}"
         >{{item.name}}</view>
