@@ -1,0 +1,110 @@
+/* pages/search/search.wxss */
+.search-container {
+  padding: 0 20rpx;
+}
+.header {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  pad: 10rpx 0;
+}
+.header .search-input {
+  flex: 1;
+  position: relative;
+  background-color: rgba(237, 237, 237, 0.3);
+  border-radius: 30rpx;
+}
+.searchIcon {
+  position: absolute;
+  left: 15rpx;
+}
+.search-input .search-content {
+  margin-left: 50rpx;
+  height: 60rpx;
+}
+.search-input .clear {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  z-index: 10;
+  font-size: 30rpx;
+}
+.place-style {
+  font-size: 28rpx;
+}
+.cancel{
+  width: 100rpx;
+  text-align: center;
+}
+ .search-content1 {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #d43c33;
+  border-bottom: 1px solid #d43c33;
+  font-size: 24rpx;
+}
+.search-list .search-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.search-item .content {
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.history-search {
+  display: flex;
+  position: relative;
+  line-height: 50rpx;
+  margin: 20rpx 0;
+}
+.history-search .title {
+  font-size: 28rpx;
+  height: 50rpx;
+}
+.history-search .history-item{
+  
+  height: 50rpx;
+  font-size: 26rpx;
+  background-color: #ededed;
+  margin-left: 20rpx;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+}
+.history-search .delete {
+  position: absolute;
+  right: 15rpx;
+  bottom: 10rpx;
+}
+.hot-container {
+  margin-top:30rpx;
+}
+.hot-container .title {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.hot-container .hot-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-list .hot-item {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+.hot-item .title {
+  margin: 0 10rpx;
+}
+.hot-item .hot-img {
+  width: 35rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}

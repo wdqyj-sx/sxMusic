@@ -1,13 +1,14 @@
 {
   "pages": [
+    
     "pages/index/index",
-    "pages/recommendSong/recommendSong", 
+    "pages/recommendSong/recommendSong",
     "pages/songDetail/songDetail",
-   
     "pages/video/video",
     "pages/personal/personal",
+    "pages/login/login",
+    "pages/search/search"
     
-    "pages/login/login"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",

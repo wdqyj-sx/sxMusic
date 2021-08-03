@@ -47,6 +47,13 @@ async getVideoList(navId){
   wx.hideLoading();
   
 },
+//热点页面
+toHot(){
+  wx.navigateTo({
+    url: '/pages/search/search',
+  })
+},
+
 // 点击导航
 changeNav(event){
   let navId = event.currentTarget.id;
